@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoreWell Pro - Professional Borewell Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-water"></i>
+                <span>BoreWell Pro</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Call Now Button (Sticky) -->
+    <a href="tel:+919876543210" class="call-button" title="Click to call us">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Home Section with Image Slider -->
+    <section id="home" class="home">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide fade" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=600&fit=crop');">
+                    <div class="slide-content">
+                        <h1>Professional Borewell Solutions</h1>
+                        <p>Reliable Water Solutions for Your Needs</p>
+                    </div>
+                </div>
+                <div class="slide fade" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=600&fit=crop');">
+                    <div class="slide-content">
+                        <h1>Industrial Borewell Expertise</h1>
+                        <p>Serving Industrial Sectors with Excellence</p>
+                    </div>
+                </div>
+                <div class="slide fade" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=600&fit=crop');">
+                    <div class="slide-content">
+                        <h1>Eco-Friendly Water Harvesting</h1>
+                        <p>Sustainable Solutions for Tomorrow</p>
+                    </div>
+                </div>
+                <div class="slide fade" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=600&fit=crop');">
+                    <div class="slide-content">
+                        <h1>Advanced Borewell Scanning</h1>
+                        <p>Latest Technology for Best Results</p>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Comprehensive Borewell Solutions</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h3>Borewell Contractors For Drinking Water</h3>
+                    <p>Expert borewell drilling and installation for residential drinking water supply.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial Borewell Contractors</h3>
+                    <p>Heavy-duty industrial borewell solutions for manufacturing facilities.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-compress"></i>
+                    </div>
+                    <h3>Mini Borewell Contractors</h3>
+                    <p>Compact borewell solutions for small residential and commercial spaces.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-radar"></i>
+                    </div>
+                    <h3>Borewell Scanning Contractors</h3>
+                    <p>Advanced scanning technology to identify best borewell drilling locations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-pipe"></i>
+                    </div>
+                    <h3>Tubewell Contractors</h3>
+                    <p>Professional tubewell installation and maintenance services.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Borewell Services</h3>
+                    <p>Comprehensive maintenance and repair services for all borewell types.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3>Rain Water Harvesting Consultants</h3>
+                    <p>Expert consultation for sustainable rainwater harvesting systems.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Borewell Drilling Services</h3>
+                    <p>State-of-the-art drilling equipment and experienced professionals.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Borewell Contractors</h3>
+                    <p>Complete borewell solutions from planning to installation.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Borewell Cleaning Services</h3>
+                    <p>Professional cleaning and maintenance to ensure optimal performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About BoreWell Pro</h2>
+                    <p>With over 15 years of industry experience, BoreWell Pro stands as a trusted leader in borewell and water solutions. Our team of certified professionals is dedicated to providing innovative, reliable, and sustainable water solutions for residential, commercial, and industrial clients.</p>
+                    <p>We combine cutting-edge technology with traditional expertise to deliver exceptional results. Our commitment to quality, customer satisfaction, and environmental sustainability drives everything we do.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>95%</h3>
+                            <p>Customer Satisfaction</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Customer Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=500&fit=crop" alt="About BoreWell Pro">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p class="section-subtitle">What Makes Us Different</p>
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Highly trained and certified professionals with years of experience in the industry.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-gears"></i>
+                    </div>
+                    <h3>Advanced Technology</h3>
+                    <p>We use the latest equipment and scanning technology for precise results.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly Approach</h3>
+                    <p>Committed to sustainable and environmentally responsible practices.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Timely Delivery</h3>
+                    <p>We complete projects on schedule without compromising quality.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Guaranteed Quality</h3>
+                    <p>All work comes with comprehensive warranties and guarantees.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support and emergency services available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">We'd Love to Hear From You</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Water Street, City, State 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 9876543210</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@borewellpro.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BoreWell Pro</h3>
+                    <p>Leading provider of professional borewell and water solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BoreWell Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
