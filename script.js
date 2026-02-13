@@ -1,119 +1,189 @@
-// Navigation Hamburger Menu
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved dark mode preference or default to false
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+    body.classList.add('dark-mode');
+    updateDarkModeIcon();
+}
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isNowDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isNowDarkMode);
+    updateDarkModeIcon();
+});
+
+function updateDarkModeIcon() {
+    const icon = darkModeToggle.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+}
+
+// Mobile Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
 });
 
-// Close menu when link is clicked
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
     });
 });
 
-// Image Slider Functions
-let slideIndex = 1;
-let slideTimer;
+// Carousel Functionality
+const carousel = document.getElementById('categoriesCarousel');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-function showSlides(n) {
-    let slides = document.getElementsByClassName('slide');
-    let dots = document.getElementsByClassName('dot');
+let scrollPosition = 0;
 
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-    }
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
-    }
-
-    if (slides[slideIndex - 1]) {
-        slides[slideIndex - 1].classList.add('active');
-    }
-    if (dots[slideIndex - 1]) {
-        dots[slideIndex - 1].classList.add('active');
-    }
-}
-
-function changeSlide(n) {
-    clearTimeout(slideTimer);
-    slideIndex += n;
-    showSlides(slideIndex);
-    autoSlide();
-}
-
-function currentSlide(n) {
-    clearTimeout(slideTimer);
-    slideIndex = n;
-    showSlides(slideIndex);
-    autoSlide();
-}
-
-function autoSlide() {
-    slideTimer = setTimeout(() => {
-        slideIndex++;
-        showSlides(slideIndex);
-        autoSlide();
-    }, 5000); // Change slide every 5 seconds
-}
-
-// Initialize slider
-showSlides(slideIndex);
-autoSlide();
-
-// Contact Form Submission
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Get form values
-    const name = this.querySelector('input[placeholder="Your Name"]').value;
-    const email = this.querySelector('input[placeholder="Your Email"]').value;
-    const phone = this.querySelector('input[placeholder="Your Phone"]').value;
-    const message = this.querySelector('textarea[placeholder="Your Message"]').value;
-
-    // Create mailto link with form data
-    const mailtoLink = `mailto:info@borewellpro.com?subject=Contact%20Form%20Submission%20from%20${encodeURIComponent(name)}&body=Name:%20${encodeURIComponent(name)}%0DEmail:%20${encodeURIComponent(email)}%0DPhone:%20${encodeURIComponent(phone)}%0D%0DMessage:%0D${encodeURIComponent(message)}`;
-
-    // Open default email client
-    window.location.href = mailtoLink;
-
-    // Optional: Show success message
-    alert('Thank you for your message! We will contact you shortly.');
-
-    // Reset form
-    this.reset();
+prevBtn.addEventListener('click', () => {
+    scrollPosition -= 350;
+    carousel.scrollLeft = scrollPosition;
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+nextBtn.addEventListener('click', () => {
+    scrollPosition += 350;
+    carousel.scrollLeft = scrollPosition;
+});
+
+// Auto-scroll carousel every 5 seconds
+setInterval(() => {
+    scrollPosition += 350;
+    if (scrollPosition > carousel.scrollWidth - carousel.clientWidth) {
+        scrollPosition = 0;
+    }
+    carousel.scrollLeft = scrollPosition;
+}, 5000);
+
+// Star Rating
+const starRatings = document.querySelectorAll('.star-rating');
+let selectedRating = 0;
+
+starRatings.forEach(star => {
+    star.addEventListener('click', (e) => {
+        selectedRating = e.target.dataset.value;
+        starRatings.forEach((s, index) => {
+            if (index < selectedRating) {
+                s.classList.add('active');
+            } else {
+                s.classList.remove('active');
+            }
+        });
+    });
+
+    star.addEventListener('mouseover', (e) => {
+        const hoverValue = e.target.dataset.value;
+        starRatings.forEach((s, index) => {
+            if (index < hoverValue) {
+                s.style.color = '#ffc107';
+            } else {
+                s.style.color = '#ddd';
+            }
+        });
+    });
+});
+
+document.querySelector('.rating-input')?.addEventListener('mouseleave', () => {
+    starRatings.forEach((s, index) => {
+        if (index < selectedRating) {
+            s.style.color = '#ffc107';
+        } else {
+            s.style.color = '#ddd';
         }
     });
 });
 
-// Call button functionality
-const callButton = document.querySelector('.call-button');
-callButton.addEventListener('click', function() {
-    // The href="tel:..." will automatically open the phone dialer
-    // This is handled by the browser and OS
+// Form Submission
+const feedbackForm = document.getElementById('feedbackForm');
+const contactForm = document.getElementById('contactForm');
+
+if (feedbackForm) {
+    feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your feedback! We will review it and get back to you soon.');
+        feedbackForm.reset();
+        starRatings.forEach(star => star.classList.remove('active'));
+        selectedRating = 0;
+    });
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for reaching out! We will contact you shortly.');
+        contactForm.reset();
+    });
+}
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Navbar Background on Scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+    } else {
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    }
+});
+
+// Mobile Responsive Adjustments
+function checkMobileView() {
+    const carousel = document.getElementById('categoriesCarousel');
+    if (window.innerWidth <= 768) {
+        carousel.style.scrollSnapType = 'x mandatory';
+    }
+}
+
+window.addEventListener('resize', checkMobileView);
+checkMobileView();
+
+// Add animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .reason-card, .testimonial-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
 });
