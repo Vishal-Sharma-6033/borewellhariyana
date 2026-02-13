@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -396,4 +396,439 @@
 
     <script src="script.js"></script>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorewellHaryna - Professional Borewell Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Sticky Call Button -->
+    <a href="tel:+919876543210" class="sticky-call-btn" title="Call Us">
+        <i class="fas fa-phone"></i>
+        <span class="call-text">Call Now</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-droplet"></i>
+                <span>BorewellHaryna</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#why-choose" class="nav-link">Why Choose Us</a></li>
+                <li><a href="#feedback" class="nav-link">Feedback</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Professional Borewell Solutions in Haryana</h1>
+            <p>Quality Borewell Services for Residential, Commercial & Agricultural Needs</p>
+            <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Get Free Consultation
+            </button>
+        </div>
+    </section>
+
+    <!-- Auto-Sliding Categories Section -->
+    <section class="categories-section">
+        <h2>Our Services</h2>
+        <div class="carousel-container">
+            <div class="carousel" id="categoriesCarousel">
+                <div class="category-item">
+                    <span>Borewell Contractors For Drinking Water</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Industrial Borewell Contractors</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Mini Borewell Contractors</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Borewell Scanning Contractors</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Tubewell Contractors</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Borewell Services</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Rain Water Harvesting Consultants</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Borewell Drilling Services</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Borewell Contractors</span>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="category-item">
+                    <span>Borewell Cleaning Services</span>
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <button class="carousel-btn prev" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="our-services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Drinking Water Borewells</h3>
+                    <p>Professional borewell drilling for residential drinking water solutions with high-quality water testing and analysis.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial Borewells</h3>
+                    <p>Specialized borewell solutions for industrial applications with high capacity drilling and sustainable water management.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Mini Borewell Drilling</h3>
+                    <p>Cost-effective mini borewell solutions perfect for small residential areas and commercial properties.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Borewell Scanning</h3>
+                    <p>Advanced scanning technology to detect water tables and ensure optimal borewell placement for maximum efficiency.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pipe"></i>
+                    </div>
+                    <h3>Tubewell Installation</h3>
+                    <p>Complete tubewell installation services with proper casing, screening, and development for lasting performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Rain Water Harvesting</h3>
+                    <p>Eco-friendly rain water harvesting systems designed to conserve water and reduce groundwater dependency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about">
+        <div class="container">
+            <h2>About BorewellHaryna</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Water Solution Partner</h3>
+                    <p>BorewellHaryna has been providing professional borewell drilling and water solutions across Haryana for over 15 years. We specialize in delivering high-quality, sustainable water solutions for residential, commercial, and agricultural needs.</p>
+                    <p>Our experienced team uses latest technology and proven methodologies to ensure every project is completed on time and within budget.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>15+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Customer Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Company Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" id="why-choose">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Licensed & Certified</h3>
+                    <p>Fully licensed and certified by government authorities with all necessary permits and qualifications.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Modern Equipment</h3>
+                    <p>We use state-of-the-art drilling equipment and technology for efficient and precise borewell construction.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Professional Team</h3>
+                    <p>Experienced professionals with years of expertise in borewell drilling and water management solutions.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-money-bill"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive and transparent pricing with no hidden charges. Free consultation and site survey.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support for maintenance, repairs, and emergency borewell services.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Environmentally conscious approach with sustainable drilling practices and water conservation methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback-section" id="feedback">
+        <div class="container">
+            <h2>Customer Feedback & Testimonials</h2>
+            <div class="feedback-container">
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excellent service! The team completed our borewell drilling on time and the water quality is outstanding."</p>
+                        <h4>Rajesh Kumar</h4>
+                        <p class="location">Gurugram</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Very professional team. They provided expert guidance throughout the project. Highly recommended!"</p>
+                        <h4>Priya Singh</h4>
+                        <p class="location">Faridabad</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best borewell service provider in Haryana. Great customer service and affordable rates."</p>
+                        <h4>Vikram Patel</h4>
+                        <p class="location">Hisar</p>
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <h3>Share Your Feedback</h3>
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message/Feedback" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating:</label>
+                            <div class="rating-input">
+                                <i class="fas fa-star star-rating" data-value="1"></i>
+                                <i class="fas fa-star star-rating" data-value="2"></i>
+                                <i class="fas fa-star star-rating" data-value="3"></i>
+                                <i class="fas fa-star star-rating" data-value="4"></i>
+                                <i class="fas fa-star star-rating" data-value="5"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                        <p><a href="tel:+919876543211">+91 98765 43211</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Visit Us</h3>
+                        <p>123 Water Street, Gurugram</p>
+                        <p>Haryana, India - 122001</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Working Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        <p>Sunday: By Appointment</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:info@borewellharyna.com">info@borewellharyna.com</a></p>
+                        <p><a href="mailto:support@borewellharyna.com">support@borewellharyna.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Quick Contact Form</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Service Type</option>
+                                <option value="drinking">Drinking Water Borewell</option>
+                                <option value="industrial">Industrial Borewell</option>
+                                <option value="mini">Mini Borewell</option>
+                                <option value="scanning">Borewell Scanning</option>
+                                <option value="tubewell">Tubewell Installation</option>
+                                <option value="rainwater">Rain Water Harvesting</option>
+                                <option value="cleaning">Borewell Cleaning</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Project Details" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>BorewellHaryna</h4>
+                <p>Professional borewell drilling and water solutions for Haryana.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Drinking Water Borewells</a></li>
+                    <li><a href="#">Industrial Borewells</a></li>
+                    <li><a href="#">Mini Borewells</a></li>
+                    <li><a href="#">Borewell Scanning</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BorewellHaryna. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
